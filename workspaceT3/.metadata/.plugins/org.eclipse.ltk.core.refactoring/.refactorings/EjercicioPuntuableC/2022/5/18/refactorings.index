@@ -1,0 +1,5 @@
+1651576681142	Extract method 'initComponents'
+1651577145348	Extract constant 'MENU_ANYADIR'
+1651577162950	Extract constant 'MENU_CONSULTAR'
+1651577174083	Extract constant 'MENU_SALIR'
+1651578535509	Extract constant 'BTN_GUARDAR'

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;dam.pruebas.string.PreubasStringBuilder&apos; to &apos;PruebasStringBuilder&apos;&#x0D;&#x0A;- Original project: &apos;PruebasUF6_1Strings&apos;&#x0D;&#x0A;- Original element: &apos;dam.pruebas.string.PreubasStringBuilder&apos;&#x0D;&#x0A;- Renamed element: &apos;dam.pruebas.string.PruebasStringBuilder&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;PreubasStringBuilder&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;dam.pruebas.string{PreubasStringBuilder.java[PreubasStringBuilder" matchStrategy="1" name="PruebasStringBuilder" qualified="false" references="true" similarDeclarations="false" stamp="1637677363069" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;lib&apos; to &apos;Actividad10_2&apos;&#x0D;&#x0A;- Original project: &apos;ActividadUF10_Login&apos;&#x0D;&#x0A;- Destination element: &apos;Actividad10_2&apos;&#x0D;&#x0A;- Original element: &apos;lib&apos;" description="Copy folder" destination="=Actividad10_2" element1="lib" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1652797411671" units="0" version="1.0"/>
+</session>

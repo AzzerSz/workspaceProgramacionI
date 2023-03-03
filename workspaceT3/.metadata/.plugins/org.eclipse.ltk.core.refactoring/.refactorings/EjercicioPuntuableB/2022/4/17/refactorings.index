@@ -1,0 +1,12 @@
+1650982550973	Copy compilation unit
+1650982553812	Delete element
+1650982557074	Delete element
+1650983198083	Extract method 'initComponents'
+1650983266699	Extract constant 'ANCHO'
+1650983280757	Extract constant 'ALTO'
+1650986819984	Extract constant 'MENU_ANYADIR'
+1650986834389	Extract constant 'MENU_CONSULTA'
+1650986847751	Extract constant 'MENU_SALIR'
+1650989379267	Extract constant 'BTN_DESC'
+1650989396759	Extract constant 'BTN_MOSTRAR_LIST'
+1650990238759	Extract method 'getNombre'

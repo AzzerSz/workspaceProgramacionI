@@ -1,0 +1,38 @@
+package dam.main;
+
+import java.util.HashMap;
+
+public class GestionArq {
+
+	public static void main(String[] args) {
+		int num = -1;
+		
+		while (num != 0) {
+			
+			for (int i = 0; i < MENU.length; i++) {
+				System.out.println(MENU[i]);
+			}
+			
+			num = solicitarNumero();
+			
+			switch (num) {
+			case 1:
+				solicitarUsuario();
+				break;
+
+			case 2:
+				mostrarUsuarios();
+				break;
+			}
+			
+		}
+		
+		System.out.println("** FINALIZANDO EL PROGRAMA **");
+		
+		sc.close();
+
+	}
+
+	}
+
+}

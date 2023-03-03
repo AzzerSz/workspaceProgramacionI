@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private void crearMenu()&apos; from &apos;dam.view.VPruebasUF9_6.centrarVentana()&apos; to &apos;dam.view.VPruebasUF9_6&apos;&#x0D;&#x0A;- Original project: &apos;PruebasUF9_6Menu&apos;&#x0D;&#x0A;- Method name: &apos;crearMenu&apos;&#x0D;&#x0A;- Destination type: &apos;dam.view.VPruebasUF9_6&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;crearMenu&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;dam.view{VPruebasUF9_6.java" name="crearMenu" replace="false" selection="1550 537" stamp="1650388039107" version="1.0" visibility="2"/>
+</session>

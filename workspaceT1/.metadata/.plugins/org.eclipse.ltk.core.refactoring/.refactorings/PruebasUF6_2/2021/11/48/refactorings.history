@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;PruebasArrays.java&apos; to &apos;PruebasUF6_2/src/dam.pruebas.arrays&apos;&#x0D;&#x0A;- Original project: &apos;PruebasUF6_2&apos;&#x0D;&#x0A;- Destination element: &apos;PruebasUF6_2/src/dam.pruebas.arrays&apos;&#x0D;&#x0A;- Original element: &apos;PruebasArrays.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;dam.pruebas.arrays" element1="/src&lt;{PruebasArrays.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" log="/src&lt;&#x09;/src&lt;dam.pruebas.arrays" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1638286820954" units="1" version="1.0"/>
+</session>

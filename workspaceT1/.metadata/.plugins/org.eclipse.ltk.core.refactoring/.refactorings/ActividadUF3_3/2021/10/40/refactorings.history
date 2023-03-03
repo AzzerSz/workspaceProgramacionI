@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;dam.ej1.pojo.coche&apos; to &apos;Coche&apos;&#x0D;&#x0A;- Original project: &apos;ActividadUF3_3&apos;&#x0D;&#x0A;- Original element: &apos;dam.ej1.pojo.coche&apos;&#x0D;&#x0A;- Renamed element: &apos;dam.ej1.pojo.Coche&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;coche&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;dam.ej1.pojo{coche.java[coche" matchStrategy="1" name="Coche" qualified="false" references="true" similarDeclarations="false" stamp="1633445585572" textual="false" version="1.0"/>
+</session>

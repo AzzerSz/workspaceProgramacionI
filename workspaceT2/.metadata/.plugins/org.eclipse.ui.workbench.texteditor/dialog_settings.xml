@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="FIN"/>
+		<list key="findhistory">
+			<item value="dbd"/>
+			<item value="FIN"/>
+			<item value="matricula"/>
+			<item value="compa"/>
+			<item value="listaPuntuaciones"/>
+			<item value="coche"/>
+			<item value="núumero"/>
+			<item value="solicitarNumeroRango"/>
+			<item value="registro"/>
+			<item value="mapa"/>
+			<item value="HashSet"/>
+			<item value="ArrayList"/>
+			<item value="Persona"/>
+			<item value="PersonaComp"/>
+			<item value="tsAnimales"/>
+		</list>
+		<list key="replacehistory">
+			<item value="CLAVE_FIN"/>
+			<item value="CALVE_FIN"/>
+			<item value="dni"/>
+			<item value="listaBaterias"/>
+			<item value="tablaFlota"/>
+			<item value="solicitarNumeroRangoInt"/>
+			<item value="seleccion"/>
+			<item value="TreeSet"/>
+			<item value="HashSet"/>
+			<item value="PersonaComp"/>
+			<item value=""/>
+			<item value="tsNumeros"/>
+			<item value="numeros"/>
+			<item value="animal"/>
+			<item value="numero"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1441"/>
+		<item key="DIALOG_Y_ORIGIN" value="254"/>
+		<item key="DIALOG_WIDTH" value="336"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

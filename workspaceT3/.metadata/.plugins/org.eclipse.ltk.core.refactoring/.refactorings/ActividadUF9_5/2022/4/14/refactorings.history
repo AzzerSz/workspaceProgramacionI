@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private void initComponents()&apos; from &apos;dam.view.VentanaHipoteca.VentanaHipoteca()&apos; to &apos;dam.view.VentanaHipoteca&apos;&#x0D;&#x0A;- Original project: &apos;ActividadUF9_5&apos;&#x0D;&#x0A;- Method name: &apos;initComponents&apos;&#x0D;&#x0A;- Destination type: &apos;dam.view.VentanaHipoteca&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;initComponents&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;dam.view{VentanaHipoteca.java" name="initComponents" replace="false" selection="129 118" stamp="1649178997322" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,31 @@
+package dam.ej3.model;
+
+public class Cliente {
+
+	public static final int CARAC_DNI = 9;
+	public static final int CARAC_FECHANAC = 10;
+	
+	protected String dni;
+	protected String fechaNac;
+	protected int numVisitas;
+	
+	public Cliente(String dni, String fechaNac) {
+		this.dni = dni;
+		this.fechaNac = fechaNac;
+		this.numVisitas = 0;
+	}
+	
+	public String getDni() {
+		return dni;
+	}
+	
+	public void registrarConsulta() {
+		numVisitas++;
+	}
+	
+	@Override
+	public String toString() {
+		return "DNI: " + dni + "\nFecha de nacimiento: " + fechaNac + "\nNúmero de visitas: " + numVisitas;
+	}
+	
+}

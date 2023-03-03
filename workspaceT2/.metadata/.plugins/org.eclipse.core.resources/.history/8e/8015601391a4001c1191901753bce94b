@@ -1,0 +1,229 @@
+package dam.ej3.main;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Scanner;
+
+import dam.ej3.model.Cliente;
+import dam.ej3.model.ClientePrivado;
+import dam.ej3.model.ClienteSociedad;
+
+public class GestionCentroFisio {
+	
+	private static final String[] MENU_PRINC = {"Indica la acción que deseas realizar:", "1 - Para añadir un cliente", 
+			"2 - Para mostrar el listado", "3 - Para registrar una visita", "4 - Para solicitar factura"
+			, "5 - Para salir de la aplicación"};
+	
+	static Scanner sc;
+	static ArrayList<Cliente> listaClientes;
+
+	public static void main(String[] args) {
+		listaClientes = new ArrayList<>();
+		
+		int num = -1;
+		sc = new Scanner(System.in);
+		
+		System.out.println("** Gestión de clientes fisiolutions **");
+		
+		while (num != 5) {
+			
+			for (int i = 0; i < MENU_PRINC.length; i++) {
+				System.out.println(MENU_PRINC[i]);
+			}
+			
+			num = solicitarNumeroRango(1, 5);
+			
+			switch (num) {
+			case 1:
+				listaClientes.add(AniadirCliente());
+				break;
+
+			case 2:
+				mostrarLista();
+				break;
+			case 3:
+				registrarVisita();
+				break;
+			case 4:
+				solicitudFactura();
+				break;
+			}
+			
+		}
+		sc.close();
+		System.out.println("** FINALIZANDO EL PROGRAMA **");
+		
+	}
+
+	private static void solicitudFactura() {
+		String dni = solicitarStringNumCarac(9, "Introduce el dni del cliente");
+		ClientePrivado cliente = new ClientePrivado(null,null,null);
+		
+		for (int i = 0; i < listaClientes.size(); i++) {
+			if (listaClientes.get(i).getDni().equalsIgnoreCase(dni) & listaClientes.get(i) instanceof ClientePrivado) {
+				cliente = (ClientePrivado) listaClientes.get(i);
+				cliente.calcularFactura();
+				i = listaClientes.size();
+			} else {
+				System.out.println("Ese dni no pertenece a ningún cliente privado");
+			}
+		}
+	}
+
+	private static void registrarVisita() {
+		String dni = solicitarStringNumCarac(9, "Introduce el dni del cliente");
+		
+		for (int i = 0; i < listaClientes.size(); i++) {
+			if (listaClientes.get(i).getDni().equalsIgnoreCase(dni)) {
+				listaClientes.get(i).registrarConsulta();
+				System.out.println("¡VISITA REGISTRADA!");
+				i = listaClientes.size();
+			} else {
+				System.out.println("Ese dni no se encuentra registrado");
+			}
+		}
+		
+	}
+
+	private static void mostrarLista() {
+		for (int i = 0; i < listaClientes.size(); i++) {
+			System.out.println("\n" + listaClientes.get(i) + "\n");
+		}
+		
+	}
+
+	private static Cliente AniadirCliente() {
+		Cliente nuevo = null;
+		String dni = solicitarStringNumCarac(Cliente.CARAC_DNI, "Introduce el dni del nuevo cliente");
+		
+		boolean contiene = contieneDNI(dni);
+		
+		if (!contiene) {
+			String solFechNacimiento = solicitarStringNumCarac(Cliente.CARAC_FECHANAC, "Introduce la fecha de nacimiento");
+			boolean sociedadAseguradora = soliSocAsegur();
+			
+			if (sociedadAseguradora) {
+				String aseguradora = solAseguradora();
+				int numAsegurado = solicitarNumAsegurado();
+				
+				nuevo = new ClienteSociedad(dni, solFechNacimiento, aseguradora, numAsegurado);
+			} else {
+				System.out.println("Introduce la cuenta bancaria");
+				String cuentaBanc = sc.nextLine();
+				nuevo = new ClientePrivado(dni, solFechNacimiento, cuentaBanc);
+			}
+			
+			System.out.println("¡¡CLIENTE REGISTRADO!!");
+			
+		} else {
+			System.out.println("El cliente ya se encuentra registrado");
+		}
+		return nuevo;
+	}
+
+	private static boolean contieneDNI(String dni) {
+		boolean contieneDNI = false;
+		
+		for (int i = 0; i < listaClientes.size(); i++) {
+			contieneDNI = listaClientes.get(i).getDni().equalsIgnoreCase(dni);
+		}
+		return contieneDNI;
+		
+	}
+
+	private static int solicitarNumAsegurado() {
+		int num = 0;
+		boolean valNoVal = true;
+		
+		while (valNoVal) {
+			try {
+				System.out.println("Introduce el número de asegurado");
+				num = Integer.parseInt(sc.nextLine());
+				
+				if (num < ClienteSociedad.MIN_NUM_ASEG) {
+					throw new NumberFormatException();
+				} else {
+					valNoVal = false;
+				}
+				
+			} catch (NumberFormatException e) {
+				System.out.println("Introduce un número entero mayor a " + ClienteSociedad.MIN_NUM_ASEG);
+			}
+		}
+		return num;
+	}
+
+	private static String solAseguradora() {
+		String aseguradora = "";
+		
+		HashMap<String, String> mapAseguradoras = new HashMap<String,String>();
+		mapAseguradoras.put(ClienteSociedad.SOCIEDAD1.substring(0,2).toUpperCase(), ClienteSociedad.SOCIEDAD1);
+		mapAseguradoras.put(ClienteSociedad.SOCIEDAD2.substring(0,2).toUpperCase(), ClienteSociedad.SOCIEDAD2);
+		mapAseguradoras.put(ClienteSociedad.SOCIEDAD3.substring(0,2).toUpperCase(), ClienteSociedad.SOCIEDAD3);
+		mapAseguradoras.put(ClienteSociedad.SOCIEDAD4.substring(0,2).toUpperCase(), ClienteSociedad.SOCIEDAD4);
+		
+		while (!mapAseguradoras.containsKey(aseguradora.toUpperCase())) {
+			System.out.println("Indica la aseguradora");
+			
+			for (Entry<String, String> asegurador : mapAseguradoras.entrySet()) {
+				System.out.println(asegurador.getKey() + " - " + asegurador.getValue());
+			}
+			
+			aseguradora = sc.nextLine();
+			
+		}
+		return aseguradora;
+	}
+
+	private static boolean soliSocAsegur() {
+		boolean sociedadAseguradora = false;
+		
+		System.out.println("Indica si el cliente tiene sociedad aseguradora (SI/NO)");
+		String resp = sc.nextLine();
+		
+		if (resp.equalsIgnoreCase("si")) {
+			sociedadAseguradora = true;
+		}
+		
+		return sociedadAseguradora;
+	}
+
+	private static String solicitarStringNumCarac(int ncarac, String msg) {
+		String dni = "";
+				
+				while (dni.length() != ncarac) {
+					System.out.println(msg);
+					dni = sc.nextLine().toUpperCase();
+					
+					if (dni.length() != ncarac) {
+						System.out.println("Introduce un valor válido (" + ncarac + " dígitos)");
+					}
+				}
+				
+				return dni;
+	}
+
+	private static int solicitarNumeroRango(int min, int max) {
+		
+		int num = 0;
+		boolean valNoVal = true;
+		
+		while (valNoVal) {
+			try {
+				num = Integer.parseInt(sc.nextLine());
+				
+				if (num < min || num > max) {
+					throw new NumberFormatException();
+				} else {
+					valNoVal = false;
+				}
+			} catch (NumberFormatException e) {
+				System.out.println("Introduce un número decimal o entero comprendido entre {" + min + ", " + max + "}");
+			}
+		}
+		
+		return num;
+	}
+
+}

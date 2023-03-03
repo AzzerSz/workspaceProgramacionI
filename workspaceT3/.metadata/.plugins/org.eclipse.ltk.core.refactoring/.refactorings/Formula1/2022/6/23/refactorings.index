@@ -1,0 +1,9 @@
+1654567862041	Extract constant 'MNTM_REGISTRO'
+1654567874520	Extract constant 'MNTM_CONSULTA'
+1654567890899	Extract constant 'MNTM_SALIR'
+1654567952155	Extract method 'initComponents'
+1654569383210	Extract constant 'BTN_GUARDAR'
+1654569400080	Extract constant 'BTN_LIMPIAR'
+1654575381859	Delete element
+1654581396861	Extract constant 'BTN_BORRAR'
+1654581415724	Extract constant 'BTN_MODIFICAR'

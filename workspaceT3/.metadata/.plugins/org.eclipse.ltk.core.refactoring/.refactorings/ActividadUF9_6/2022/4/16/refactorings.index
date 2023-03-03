@@ -1,0 +1,7 @@
+1650546970914	Extract method 'initComponents'
+1650547761438	Extract constant 'MNTM_ADD'
+1650547843786	Extract constant 'MNTM_CONSULTA'
+1650547864638	Extract constant 'MNTM_SALIR'
+1650550418396	Extract constant 'BTN_GUARDAR'
+1650550663320	Extract method 'initComponents'
+1650550994940	Extract constant 'CONSULTAR_COLECCIÓN'

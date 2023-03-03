@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="dam.ej1.pojo.Coche"/>
+    <fullyQualifiedTypeName name="dam.ej2.pojo.Helipuerto"/>
+    <fullyQualifiedTypeName name="dam.sentif.ej5.pojo.Rueda"/>
+    <fullyQualifiedTypeName name="dam.sentif.ej5.main.UsoRueda"/>
+    <fullyQualifiedTypeName name="dam.sentswitch.ej1.pojo.Persona"/>
+    <fullyQualifiedTypeName name="ejercicio3.pojo.Viaje"/>
+    <fullyQualifiedTypeName name="ejercicio3.pojo.otro.EquipoFutbol"/>
+    <fullyQualifiedTypeName name="dam.ejercicio3.pojo.Empleado"/>
+    <fullyQualifiedTypeName name="dam.ej2.pojo.Clase2"/>
+    <fullyQualifiedTypeName name="java.lang.Class"/>
+    <fullyQualifiedTypeName name="dam.ej1.pojo.Clase1"/>
+    <fullyQualifiedTypeName name="dam.ej5.pojo.Ordenador"/>
+    <fullyQualifiedTypeName name="dam.ej6.pojo.Autor"/>
+    <fullyQualifiedTypeName name="dam.ej6.pojo.Libro"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="dam.ej31.pojo.Alumno"/>
+    <fullyQualifiedTypeName name="javax.security.auth.callback.TextOutputCallback"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="dam.ej9.main.Ejercicio9"/>
+    <fullyQualifiedTypeName name="dam.ej9.pojo.Persona"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="dam.ej2.pojo.Encuesta"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="dam.ej30.pojo.FrutaAcida"/>
+    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+    <fullyQualifiedTypeName name="dam.ej2.main.GestorEstaciones"/>
+    <fullyQualifiedTypeName name="dam.ej2.pojo.Estacion"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="dam.ej3.pojo.Estacion"/>
+</qualifiedTypeNameHistroy>

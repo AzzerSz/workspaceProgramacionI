@@ -1,0 +1,12 @@
+1652799797946	Extract method 'initComponents'
+1652803104008	Extract constant 'MNTM_SALIR'
+1652803123671	Extract constant 'MNTM_CONSULTA'
+1652803150272	Extract constant 'MNTM_MANTENIMIENTO'
+1652803165614	Extract constant 'MNTM_REGISTRO'
+1652803183106	Extract constant 'MNTM_MODIFICACION'
+1652803413618	Delete element
+1652804206489	Extract method 'initComponents'
+1652804259597	Extract constant 'BTN_CONSULTAR'
+1652807186612	Extract constant 'PRECIO'
+1652807551987	Extract constant 'BTN_ELIMINAR'
+1652808765884	Rename type 'AcessoDB'

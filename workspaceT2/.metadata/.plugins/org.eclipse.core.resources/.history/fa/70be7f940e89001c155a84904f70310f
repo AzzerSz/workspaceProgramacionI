@@ -1,0 +1,49 @@
+package pruebas.pojo;
+
+public class PersonaComp implements Comparable<PersonaComp> {
+	
+	private String nombre;
+	private int edad;
+	
+	public PersonaComp(String nombre, int edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", edad=" + edad + "]";
+	}
+	
+	/*@Override
+	public boolean equals(Object obj) {
+		boolean iguales = false;
+		PersonaComp p = (PersonaComp) obj;
+		
+		if (nombre.equals(p.nombre) && edad == p.edad){
+			iguales = true;
+		}
+		
+		return iguales;
+	}
+	@Override
+	public int hashCode() {
+		Integer i = edad;
+		int hc = nombre.hashCode() + i.hashCode();	
+		return hc;
+	}*/
+	
+	@Override
+	public int compareTo(PersonaComp p) {
+		int comp = 0;
+		
+		comp = nombre.compareTo(p.nombre);
+		
+		if (comp == 0) {
+			comp = edad - p.edad;
+		}
+		
+		return comp;
+	}
+}

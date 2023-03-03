@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private void initComponents()&apos; from &apos;view.VResolverEc.VResolverEc()&apos; to &apos;view.VResolverEc&apos;&#x0D;&#x0A;- Original project: &apos;ActividadUF9_3_EJ3&apos;&#x0D;&#x0A;- Method name: &apos;initComponents&apos;&#x0D;&#x0A;- Destination type: &apos;view.VResolverEc&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;initComponents&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;view{VResolverEc.java" name="initComponents" replace="false" selection="372 1393" stamp="1648565367748" version="1.0" visibility="2"/>
+</session>

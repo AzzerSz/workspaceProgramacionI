@@ -1,0 +1,64 @@
+package dam.main;
+
+import java.util.Scanner;
+
+public class GestionArq {
+
+	private static final String[] MENU = {"Introduce:", "1 - Para añadir una estancia", 
+			"2 - Para mostrar las estancias de la casa y los m2", "0 - Para salir del programa"};
+	
+	static Scanner sc;
+
+	public static void main(String[] args) {
+		int num = -1;
+		sc = new Scanner(System.in);
+		
+		while (num != 0) {
+			
+			for (int i = 0; i < MENU.length; i++) {
+				System.out.println(MENU[i]);
+			}
+			
+			num = solicitarNumeroRango(1, 3, "");
+			
+			switch (num) {
+			case 1:
+				
+				break;
+
+			case 2:
+				
+				break;
+			}
+			
+		}
+		
+		System.out.println("** FINALIZANDO EL PROGRAMA **");
+		
+		sc.close();
+
+	}
+
+	private static int solicitarNumeroRango(int min, int max, String msg) {
+		int num = 0;
+		boolean valNoVal = true;
+		
+		while (valNoVal) {
+			try {
+				System.out.print(msg);
+				num = Integer.parseInt(sc.nextLine());
+				
+				if (num < min || num > max) {
+					throw new NumberFormatException();
+				} else {
+					valNoVal = false;
+				}
+			} catch (NumberFormatException e) {
+				System.out.println("Introduce un número entero comprendido entre {" + min + ", " + max + "}");
+			}
+		}
+		
+		return num;
+	}
+
+}

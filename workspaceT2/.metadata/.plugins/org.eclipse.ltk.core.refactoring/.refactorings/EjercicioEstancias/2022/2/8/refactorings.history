@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;dam.model.habitacion&apos; to &apos;Habitacion&apos;&#x0D;&#x0A;- Original project: &apos;EjercicioEstancias&apos;&#x0D;&#x0A;- Original element: &apos;dam.model.habitacion&apos;&#x0D;&#x0A;- Renamed element: &apos;dam.model.Habitacion&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;habitacion&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;dam.model{habitacion.java[habitacion" matchStrategy="1" name="Habitacion" qualified="false" references="true" similarDeclarations="false" stamp="1645715880232" textual="false" version="1.0"/>
+</session>

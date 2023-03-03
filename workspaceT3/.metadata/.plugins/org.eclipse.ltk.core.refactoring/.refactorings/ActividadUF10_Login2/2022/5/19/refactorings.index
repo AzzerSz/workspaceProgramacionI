@@ -1,0 +1,4 @@
+1652364184142	Copy compilation unit
+1652364328873	Extract constant 'BTN_ACEPTAR'
+1652364345207	Extract constant 'BTN_CANCELAR'
+1652365175038	Extract method 'comprobarUsuario'

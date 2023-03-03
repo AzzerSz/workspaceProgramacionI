@@ -1,0 +1,140 @@
+package dam.ej2;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Scanner;
+
+public class GestionBonos {
+	
+	static final int NUM_SESIONES1 = 1;
+	static final int NUM_SESIONES2 = 5;
+	static final int NUM_SESIONES3 = 10;
+	static final int NUM_SESIONES4 = 20;
+	
+	static final String CLAVE_FIN = "FIN";
+	
+	static final int NUM_ANALISIS_SESIONES = 0;
+
+	static Scanner sc;
+	static HashMap<String, Integer> tablaBonos;
+	
+	public static void main(String[] args) {
+		
+		tablaBonos = new HashMap<String, Integer>();
+		
+		sc = new Scanner(System.in);
+		
+		String dni = "";
+		int cantSesion;
+		
+		do {
+			dni = solicitarDNI();
+			
+			if (!dni.equals(CLAVE_FIN)) {
+				if (!tablaBonos.containsKey(dni)) {
+					cantSesion = solicitarCantidad();
+					tablaBonos.put(dni, cantSesion);
+					System.out.println("¡¡ALTA DE BONO!!");
+				} else {
+					if (tablaBonos.get(dni) == 0) {
+						cantSesion = solicitarCantidad();
+						tablaBonos.put(dni, tablaBonos.get(dni) + cantSesion);
+						System.out.println("¡¡RECARGA DE BONO¡¡");
+
+					} else {
+						tablaBonos.put(dni, tablaBonos.get(dni) - 1);
+						System.out.println("¡¡RESERVA DE SACO!! Sesiones restantes: " + tablaBonos.get(dni));
+					}
+				} 
+			}
+			
+			
+		} while (!dni.equals(CLAVE_FIN));
+		
+		mostrarBonos();
+
+	}
+
+	private static void mostrarBonos() {
+		
+		System.out.println("** Listado de bonos **");
+		
+		ArrayList<Entry<String, Integer>> listaBonos = new ArrayList<Entry<String, Integer>>();
+		listaBonos.addAll(tablaBonos.entrySet());
+		
+		listaBonos.sort(Entry.comparingByKey());
+	
+		for (int i = 0; i < listaBonos.size(); i++) {
+			System.out.println(listaBonos.get(i).getKey() + " - " 
+					+ listaBonos.get(i).getValue());
+		}
+		
+		mostrarCantBonos();
+		
+	}
+
+	private static void mostrarCantBonos() {
+		int cont = 0;
+		
+		for (Entry<String,Integer> pares : tablaBonos.entrySet()) {
+			if (pares.getValue() == NUM_ANALISIS_SESIONES) {
+				cont++;
+			}
+			
+		}
+		
+		System.out.println("Cantidad de bonos con " + NUM_ANALISIS_SESIONES + "sesiones: " + cont);
+		
+	}
+
+	private static int solicitarCantidad() {
+		int cantSesion = 0;
+		boolean valNoVal = true;
+		
+			while (valNoVal) {
+				try {
+					System.out.println("Indica la cantidad de sesiones con las que se quiere cargar el bono: (" 
+										+ NUM_SESIONES1 + ", " + NUM_SESIONES2 + ", " 
+										+ NUM_SESIONES3 + " o " + NUM_SESIONES4 + ")");
+
+					cantSesion = Integer.parseInt(sc.nextLine());
+
+					if (cantSesion == NUM_SESIONES1 || cantSesion == NUM_SESIONES2 || cantSesion == NUM_SESIONES3
+							|| cantSesion == NUM_SESIONES4) {
+						
+						valNoVal = false;
+						
+					} else {
+						throw new NumberFormatException();
+					}
+					
+				} catch (NumberFormatException e) {
+					System.out.println("Introduce un entero válido (" + NUM_SESIONES1 + ", " + NUM_SESIONES2 + ", "
+							+ NUM_SESIONES3 + " o " + NUM_SESIONES4 + ")");
+				} 
+			}
+		return cantSesion;
+	}
+
+	private static String solicitarDNI() {
+	String dni = "";
+	int num = 0;
+		
+		while (num != 9) {
+			System.out.println("Indica el dni del socio:");
+			dni = sc.nextLine().toUpperCase();
+			num = dni.length();
+			if (dni.equals(CLAVE_FIN)) {
+				num = 9;
+			}
+			
+			if (num != 9) {
+				System.out.println("Introduce un valor válido NNNNNNNNX o " + CLAVE_FIN + "para finalizar el programa");
+			}
+		}
+		
+		return dni;
+	}
+
+}

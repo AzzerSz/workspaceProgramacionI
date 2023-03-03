@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ConfiguracionDB.properties&apos; to &apos;Actividad10_2&apos;&#x0D;&#x0A;- Original project: &apos;ActividadUF10_Login_Properties&apos;&#x0D;&#x0A;- Destination element: &apos;Actividad10_2&apos;&#x0D;&#x0A;- Original element: &apos;ConfiguracionDB.properties&apos;" description="Copy file" destination="=Actividad10_2" element1="ConfiguracionDB.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1652798658188" units="0" version="1.0"/>
+</session>
